@@ -2,14 +2,12 @@
 #include <iostream>
 #include <sstream>
 
-using namespace std;
-
 int main(int argc, char const *argv[])
 {
 	std::stringstream ss;
 	if (argc == 1)
 	{
-		cout << "* LOUD AND UNBEARABLE FEED BACK NOISE *";
+		std::cout << "* LOUD AND UNBEARABLE FEED BACK NOISE *";
 		return 0;
 	}
 	if (argc > 1)
@@ -28,6 +26,6 @@ int main(int argc, char const *argv[])
 		s[a] = toupper(s[a]);
 		a++;
 	}
-	cout << s;
+	std::cout << s;
 	return 0;
 }
