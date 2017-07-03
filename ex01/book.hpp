@@ -89,6 +89,11 @@ public:
 			i++;
 			std::cout << std::endl;
 		}
+		std::cout << "pick entry to view";
+		std::string choice;
+		std::getline(std::cin, choice);
+		int num = std::stoi(choice);
+		this->people[num].print();
 		return;
 	}
 
