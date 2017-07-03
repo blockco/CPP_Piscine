@@ -31,7 +31,6 @@ public:
 		std::cout << this->secret << std::endl;
 	}
 };
-
 class Book
 {
 public:
@@ -45,6 +44,14 @@ public:
 	{
 		int i = 0;
 
+		std::cout.width(10);
+		std::cout << std::right << "Index";
+		std::cout << '|';
+		std::cout << std::right << "First";
+		std::cout << '|';
+		std::cout << std::right << "Last";
+		std::cout << '|';
+		std::cout << std::right << "nickname" << std::endl;
 		while (i < this->next)
 		{
 			std::string temp;
@@ -90,13 +97,21 @@ public:
 			std::cout << std::endl;
 		}
 		std::cout << "pick entry to view";
-		std::string choice;
-		std::getline(std::cin, choice);
-		int num = std::stoi(choice);
+		int t = 1;
+		int num = 0;
+		while (t)
+		{
+			std::string choice;
+			std::getline(std::cin, choice);
+			num = std::stoi(choice);
+			if (num < this->next && num > -1)
+				t = 0;
+			else
+				std::cout << "RETRY" << std::endl;
+		}
 		this->people[num].print();
 		return;
 	}
-
 	void addit()
 	{
 		if (this->next > 7)
