@@ -1,5 +1,6 @@
 #include "book.class.hpp"
 #include <iostream>
+#include <exception>
 
 void Contacts::print()
 {
@@ -28,10 +29,13 @@ void Book::searchit()
 	std::cout.width(10);
 	std::cout << std::right << "Index";
 	std::cout << '|';
+	std::cout.width(10);
 	std::cout << std::right << "First";
 	std::cout << '|';
+	std::cout.width(10);
 	std::cout << std::right << "Last";
 	std::cout << '|';
+	std::cout.width(10);
 	std::cout << std::right << "nickname" << std::endl;
 	while (i < this->next)
 	{
@@ -72,7 +76,7 @@ void Book::searchit()
 			temp = this->people[i].n_name;
 		std::cout.width(10);
 		std::cout << std::right;
-		std::cout << temp << '|';
+		std::cout << temp;
 
 		i++;
 		std::cout << std::endl;
@@ -84,7 +88,15 @@ void Book::searchit()
 	{
 		std::string choice;
 		std::getline(std::cin, choice);
-		num = std::stoi(choice);
+		try
+		{
+			num = std::stoi(choice);
+		}
+		catch(std::exception& err)
+		{
+			std::cout << "not digit retry";
+			continue;
+		}
 		if (num < this->next && num > -1)
 			t = 0;
 		else
