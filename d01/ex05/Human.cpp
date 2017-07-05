@@ -19,7 +19,7 @@ std::string Human::identify()
 	return spot.str();
 }
 
-Brain &Human::getBrain()
+const Brain &Human::getBrain() const
 {
 	return this->_brain;
 }

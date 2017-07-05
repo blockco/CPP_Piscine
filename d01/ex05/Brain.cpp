@@ -11,7 +11,7 @@ Brain::~Brain()
 
 }
 
-std::string Brain::identify()
+const std::string Brain::identify() const
 {
 	std::stringstream spot;
 	spot << this;

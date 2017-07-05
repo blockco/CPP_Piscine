@@ -7,8 +7,8 @@ public:
 	Human();
 	~Human();
 	std::string identify();
-	Brain &getBrain();
+	const Brain &getBrain() const;
 
 private:
-	Brain _brain;
+	Brain const _brain;
 };

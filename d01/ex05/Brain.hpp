@@ -5,5 +5,5 @@ class Brain{
 public:
 	Brain();
 	~Brain();
-	std::string identify();
+	const std::string identify() const;
 };
