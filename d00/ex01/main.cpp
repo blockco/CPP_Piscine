@@ -6,7 +6,7 @@
 /*   By: rpassafa <rpassafa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/03 22:18:47 by rpassafa          #+#    #+#             */
-/*   Updated: 2017/07/03 22:18:49 by rpassafa         ###   ########.fr       */
+/*   Updated: 2017/07/04 23:01:19 by rpassafa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int main() {
 	Book phone;
 	std::string action;
 
-	while (1)
+	while (std::cin != 0)
 	{
 		std::cout << "Pick action: ";
 		std::getline (std::cin, action);
