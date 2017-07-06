@@ -10,4 +10,4 @@ public:
 private:
 	int _num;
 	static const int _dig = 8;
-}
+};
