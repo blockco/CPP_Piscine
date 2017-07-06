@@ -6,7 +6,7 @@
 /*   By: rpassafa <rpassafa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/03 22:18:37 by rpassafa          #+#    #+#             */
-/*   Updated: 2017/07/04 23:01:23 by rpassafa         ###   ########.fr       */
+/*   Updated: 2017/07/05 22:35:12 by rpassafa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,7 +96,7 @@ void Book::searchit()
 	std::cout << "pick entry to view";
 	int t = 1;
 	int num = 0;
-	while (t)
+	while (t && std::cin != 0)
 	{
 		std::string choice;
 		std::getline(std::cin, choice);
